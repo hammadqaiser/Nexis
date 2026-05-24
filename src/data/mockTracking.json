@@ -1,0 +1,110 @@
+{
+  "NX10020030PK": {
+    "awb": "NX10020030PK",
+    "status": "Delivered",
+    "origin": "Karachi",
+    "destination": "Lahore",
+    "service": "Air Express",
+    "shipper": "E-Commerce Store PK",
+    "consignee": "Muhammad Ali",
+    "weight": 1.5,
+    "pieces": 1,
+    "declaredValue": 4500,
+    "codAmount": 4500,
+    "estDelivery": "May 22, 2026",
+    "checkpoints": [
+      {
+        "time": "May 22, 2026, 02:45 PM",
+        "location": "Lahore Hub (Gulberg)",
+        "activity": "Delivered",
+        "description": "Shipment delivered to Muhammad Ali. Signed by consignee."
+      },
+      {
+        "time": "May 22, 2026, 09:15 AM",
+        "location": "Lahore Hub (Gulberg)",
+        "activity": "Out for Delivery",
+        "description": "Shipment assigned to Rider (Sajid Khan, +923009988776) for doorstep delivery."
+      },
+      {
+        "time": "May 21, 2026, 11:30 PM",
+        "location": "Lahore Sorting Facility",
+        "activity": "In Transit",
+        "description": "Shipment received at Lahore main sorting station from air cargo terminal."
+      },
+      {
+        "time": "May 21, 2026, 07:15 PM",
+        "location": "Karachi Airport Terminal",
+        "activity": "In Transit",
+        "description": "Shipment loaded onto cargo flight NX-102 scheduled to Lahore airport."
+      },
+      {
+        "time": "May 21, 2026, 04:30 PM",
+        "location": "Karachi Main Hub (PECHS)",
+        "activity": "Picked Up",
+        "description": "Shipment received at core sorting terminal and prepared for air transit routing."
+      },
+      {
+        "time": "May 21, 2026, 10:15 AM",
+        "location": "Karachi PECHS Office",
+        "activity": "Booked",
+        "description": "Shipment registered by E-Commerce Store PK. Airway bill generated."
+      }
+    ]
+  },
+  "NX99988877PK": {
+    "awb": "NX99988877PK",
+    "status": "In Transit",
+    "origin": "Islamabad",
+    "destination": "Karachi",
+    "service": "Overland Eco",
+    "shipper": "Tech Distributors Pakistan",
+    "consignee": "Ayesha Ahmed",
+    "weight": 12.5,
+    "pieces": 2,
+    "declaredValue": 65000,
+    "codAmount": 0,
+    "estDelivery": "May 25, 2026",
+    "checkpoints": [
+      {
+        "time": "May 23, 2026, 04:30 AM",
+        "location": "Multan Transit Hub",
+        "activity": "In Transit",
+        "description": "Shipment routed and passed through overland highway terminal."
+      },
+      {
+        "time": "May 22, 2026, 08:30 PM",
+        "location": "Rawalpindi Sorting Facility",
+        "activity": "Picked Up",
+        "description": "Shipment sorted and loaded on overland logistics truck scheduled for Karachi."
+      },
+      {
+        "time": "May 22, 2026, 01:15 PM",
+        "location": "Islamabad Blue Area Center",
+        "activity": "Booked",
+        "description": "Shipment physically booked and details logged into logistics engine."
+      }
+    ]
+  },
+  "NX55544433PK": {
+    "awb": "NX55544433PK",
+    "status": "Booked",
+    "origin": "Lahore",
+    "destination": "Peshawar",
+    "service": "Air Express",
+    "shipper": "Zara Apparel",
+    "consignee": "Hamza Yusuf",
+    "weight": 0.8,
+    "pieces": 1,
+    "declaredValue": 3200,
+    "codAmount": 3200,
+    "estDelivery": "May 24, 2026",
+    "checkpoints": [
+      {
+        "time": "May 23, 2026, 11:45 AM",
+        "location": "Lahore Gulberg Center",
+        "activity": "Booked",
+        "description": "Shipment booked digitally by merchant via seller panel integration. Awaiting rider pickup."
+      }
+    ]
+  }
+}

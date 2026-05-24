@@ -1,0 +1,26 @@
+{
+  "baseRates": {
+    "sameCity": {
+      "standard": 180,
+      "express": 280
+    },
+    "interCity": {
+      "standard": 320,
+      "express": 450
+    }
+  },
+  "perKgRates": {
+    "sameCity": {
+      "standard": 60,
+      "express": 100
+    },
+    "interCity": {
+      "standard": 120,
+      "express": 180
+    }
+  },
+  "adjustments": {
+    "fuelSurchargePercent": 10,
+    "taxPercent": 16
+  }
+}

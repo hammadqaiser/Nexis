@@ -1,0 +1,20 @@
+[
+  { "id": "karachi", "name": "Karachi", "province": "Sindh" },
+  { "id": "lahore", "name": "Lahore", "province": "Punjab" },
+  { "id": "islamabad", "name": "Islamabad", "province": "Capital" },
+  { "id": "rawalpindi", "name": "Rawalpindi", "province": "Punjab" },
+  { "id": "faisalabad", "name": "Faisalabad", "province": "Punjab" },
+  { "id": "peshawar", "name": "Peshawar", "province": "KPK" },
+  { "id": "multan", "name": "Multan", "province": "Punjab" },
+  { "id": "quetta", "name": "Quetta", "province": "Balochistan" },
+  { "id": "sialkot", "name": "Sialkot", "province": "Punjab" },
+  { "id": "gujranwala", "name": "Gujranwala", "province": "Punjab" },
+  { "id": "hyderabad", "name": "Hyderabad", "province": "Sindh" },
+  { "id": "sukkur", "name": "Sukkur", "province": "Sindh" },
+  { "id": "bahawalpur", "name": "Bahawalpur", "province": "Punjab" },
+  { "id": "sargodha", "name": "Sargodha", "province": "Punjab" },
+  { "id": "sahiwal", "name": "Sahiwal", "province": "Punjab" },
+  { "id": "gwadar", "name": "Gwadar", "province": "Balochistan" },
+  { "id": "gilgit", "name": "Gilgit", "province": "Gilgit-Baltistan" },
+  { "id": "muzaffarabad", "name": "Muzaffarabad", "province": "AJK" }
+]

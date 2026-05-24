@@ -1,0 +1,111 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      String   // "ADMIN", "FRANCHISE", "RIDER"
+  branchId  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Shipment {
+  id              String   @id @default(cuid())
+  trackingNumber  String   @unique
+  
+  senderName      String
+  senderPhone     String
+  senderAddress   String
+  senderCity      String
+
+  receiverName    String
+  receiverPhone   String
+  receiverAddress String
+  receiverCity    String
+
+  // New fields from Air Waybill
+  origin          String   @default("ISB")
+  destination     String   @default("LHE")
+  pieces          Int      @default(1)
+  dimensions      String?
+  insuranceValue  Float?
+  instructions    String?
+
+  weight          Float
+  serviceType     String
+  price           Float
+  isCOD           Boolean  @default(false)
+  codAmount       Float?
+  
+  status          String   @default("Booked") // Booked, Picked Up, In Transit, Out for Delivery, Delivered, Returned
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  events          TrackingEvent[]
+  invoice         Invoice?
+}
+
+model TrackingEvent {
+  id          String   @id @default(cuid())
+  shipmentId  String
+  status      String
+  location    String
+  description String
+  timestamp   DateTime @default(now())
+
+  shipment    Shipment @relation(fields: [shipmentId], references: [id], onDelete: Cascade)
+}
+
+model Invoice {
+  id               String   @id @default(cuid())
+  invoiceNumber    String   @unique
+  shipmentId       String   @unique
+  
+  weightCharges    Float    @default(0)
+  nonDocCharges    Float    @default(0)
+  insuranceCharges Float    @default(0)
+  otherCharges     Float    @default(0)
+  taxAmount        Float    @default(0)
+  totalAmount      Float    @default(0)
+  
+  status           String   @default("Unpaid") // Unpaid, Paid, Void
+  
+  issuedAt         DateTime @default(now())
+  dueDate          DateTime?
+
+  shipment         Shipment @relation(fields: [shipmentId], references: [id], onDelete: Cascade)
+}
+
+model RateCard {
+  id                    String   @id @default("global_rates")
+  
+  sameCityStandardBase  Float    @default(180)
+  sameCityExpressBase   Float    @default(280)
+  interCityStandardBase Float    @default(320)
+  interCityExpressBase  Float    @default(450)
+
+  sameCityStandardKg    Float    @default(60)
+  sameCityExpressKg     Float    @default(100)
+  interCityStandardKg   Float    @default(120)
+  interCityExpressKg    Float    @default(180)
+
+  fuelSurchargePercent  Float    @default(10)
+  taxPercent            Float    @default(16)
+
+  updatedAt             DateTime @updatedAt
+}
