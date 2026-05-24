@@ -43,7 +43,7 @@ export default async function ShipmentDetailsPage({ params }: { params: Promise<
 
   const shipment = await prisma.shipment.findUnique({
     where: { id: resolvedParams.id },
-    include: { events: { orderBy: { createdAt: "desc" } } }
+    include: { events: { orderBy: { timestamp: "desc" } } }
   });
 
   if (!shipment) {
