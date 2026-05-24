@@ -178,7 +178,7 @@ export default async function ShipmentDetailsPage({ params }: { params: Promise<
                   <div style={{ backgroundColor: '#171717', border: '1px solid #262626', borderRadius: '8px', padding: '16px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
                       <h4 style={{ margin: 0, fontSize: '14px', color: idx === 0 ? '#fff' : '#d4d4d4', fontWeight: 600 }}>{event.status}</h4>
-                      <span style={{ fontSize: '12px', color: '#737373' }}>{new Date(event.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                      <span style={{ fontSize: '12px', color: '#737373' }}>{new Date(event.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
                     </div>
                     <p style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#a3a3a3' }}>{event.description}</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#737373' }}>
